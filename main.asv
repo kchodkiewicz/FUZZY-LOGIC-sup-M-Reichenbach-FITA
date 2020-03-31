@@ -24,7 +24,12 @@ figure(4)
 plot(B2)
 
 AprimTrim = trimf(X, [0 2 3]);
-AprimTrap = trapmf(X, [2 2.4 2.7 3]);
+AprimTrap = trapmf(X, [0 2 3 4]);
+
+Ap = syms(AprimTrim);
+Ap2 = 
+% AprimTrim = @Atrim;
+% AprimTrap = @Atrap;
 
 R1 = Implication_reich(A1, B1);
 R2 = Implication_reich(A2, B2);
