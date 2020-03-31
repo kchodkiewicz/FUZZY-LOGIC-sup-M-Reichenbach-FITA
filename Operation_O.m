@@ -1,7 +1,8 @@
 function [E] = Operation_O(c,d)
 
+x = ones(100, 1);
 
-CE = reshape(c, [100, 100]);
+CE = x*c
 
 F = min(CE, d);
 

@@ -14,14 +14,6 @@ A2 = trimf(X, [2 4 8]);
 
 B1 = trimf(Y, [2 3 4]);
 B2 = trimf(Y, [0 2 3]);
-figure(1)
-plot(A1)
-figure(2)
-plot(A2)
-figure(3)
-plot(B1)
-figure(4)
-plot(B2)
 
 AprimTrim = trimf(X, [0 2 3]);
 AprimTrap = trapmf(X, [2 2.4 2.7 3]);
@@ -47,4 +39,13 @@ end
 for i=1:100
     BtrimAVG(i) = (B1primTrim(i)+B2primTrim(i))/2;
 end 
+
+figure('Name', 'BtrapMIN')
+plot(BtrapMIN)
+figure('Name', 'BtrimMIN')
+plot(BtrimMIN)
+figure('Name', 'BtrapAVG')
+plot(BtrapAVG)
+figure('Name', 'BtrimAVG')
+plot(BtrimAVG)
 
