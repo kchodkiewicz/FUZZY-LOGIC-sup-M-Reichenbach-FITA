@@ -28,6 +28,19 @@ B2primTrap = Operation_O(AprimTrap, R2);
 B1primTrim = Operation_O(AprimTrim, R1);
 B2primTrim = Operation_O(AprimTrim, R2);
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% figure("Name", "trojkąt")
+% hold on;
+% plot(B1primTrim, "-r");
+% plot(B2primTrim, "-b");
+% hold off;
+% figure("Name", "trapez")
+% hold on;
+% plot(B1primTrap, "-r");
+% plot(B2primTrap, "-b");
+% hold off;
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
 % Agregacja
 BtrapMIN = min(B1primTrap, B2primTrap);
 BtrimMIN = min(B1primTrim, B2primTrim);
@@ -41,26 +54,14 @@ for i=1:100
     BtrimAVG(i) = (B1primTrim(i)+B2primTrim(i))/2;
 end 
 
-% figure('Name', 'R1, BtrimAVG')
-% hold on;
-% plot(Y,R1)
-% plot(Y,BtrimAVG)
-% hold off;
-% figure('Name', 'R2, BtrapAVG')
-% hold on;
-% plot(Y,R1&R2)
-% plot(Y,BtrapAVG)
-% hold off;
-% figure('Name', 'R1&R2')
-% plot(Y,R1&R2)
 % Wyniki
 figure('Name', 'Btrap min')
-plot(Y,BtrapMIN)
+plot(BtrapMIN)
 figure('Name', 'Btrap avg')
-plot(Y,BtrapAVG)
+plot(BtrapAVG)
 
 figure('Name', 'Btrim min')
-plot(Y,BtrimMIN)
+plot(BtrimMIN)
 figure('Name', 'Btrim avg')
-plot(Y,BtrimAVG)
+plot(BtrimAVG)
 

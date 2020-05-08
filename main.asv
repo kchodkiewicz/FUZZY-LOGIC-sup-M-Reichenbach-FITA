@@ -41,18 +41,14 @@ for i=1:100
     BtrimAVG(i) = (B1primTrim(i)+B2primTrim(i))/2;
 end 
 
-% figure('Name', 'R1, BtrimAVG')
-% hold on;
-% plot(Y,R1)
-% plot(Y,BtrimAVG)
-% hold off;
-% figure('Name', 'R2, BtrapAVG')
-% hold on;
-% plot(Y,R1&R2)
-% plot(Y,BtrapAVG)
-% hold off;
-% figure('Name', 'R1&R2')
-% plot(Y,R1&R2)
+figure('Name', 'R1')
+hold on;
+plot(Y,R1)
+plot(Y,
+figure('Name', 'R2')
+plot(Y,R2)
+figure('Name', 'R1&R2')
+plot(Y,R1&R2)
 % Wyniki
 figure('Name', 'Btrap min')
 plot(Y,BtrapMIN)
